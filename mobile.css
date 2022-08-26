@@ -1,0 +1,428 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/* navbar start */
+
+/*for mobile*/
+
+[class*="col-"]{
+    width: 100%;
+ }
+ 
+/*for desktop*/
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+.navbar::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.logo img{
+    height: 97px;
+    width: 100px;
+    border-radius: 50%;
+}
+.navbar{
+    text-align: center;
+    background-color: #0c6168;
+}
+.nav_head h1{
+    color: white;
+    padding: 10px 0 5px 0;
+}
+.nav_head span{
+    color: red;
+}
+.nav_menu{
+    display: flex;
+    flex-direction: column;
+}
+.nav_menu a{
+    text-decoration: none;
+    font-size: 23px;
+    background-color: #19c2d1;
+    width: 70%;
+    padding: 3px;
+    margin: 0 auto;
+    margin-top: 17px;
+    color: white;
+    border-radius: 10px;
+}
+.nav_menu a:hover{
+    background-color: rgb(86, 240, 214); 
+}
+p{
+    font-size: 15px;
+    text-align: justify;
+}
+/* navbar end */
+
+/* profile start */
+
+.profile{
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+}
+.profile .weather-top{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    height: 80px;
+    width: 80px;
+    transition: transform 2s linear;
+}
+.profile .weather-top:hover{
+    transform: rotate(360deg);
+}
+.profile .weather-botom{
+    position: absolute;
+    left: 50px;
+    bottom: 30px;
+    height: 80px;
+    width: 80px;
+    transition: transform 2s linear;
+}
+.profile .weather-botom:hover{
+    transform: rotate(360deg);
+}
+.profile-des h1{
+    font-family: 'Satisfy', cursive;
+    font-size: 40px;
+}
+.profile-des p{
+    margin: 30px auto 30px auto;
+    text-align: center;
+   color: gray;
+   width: 90%;
+}
+.profile::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+/* profile end */
+
+/* about me start*/
+
+h2{
+    font-size: 25px;
+    text-align: center;
+}
+.about-me{
+    background-color: #39a4a6;
+    padding: 5px 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+.dtd-hr{
+    border: 3px dotted white;
+    border-bottom: none;
+    width: 130px;
+    margin: 10px auto;
+}
+.aboutm-hr{
+    width: 80%;
+    margin: 0 auto;
+}
+.about-me{
+    content: "";
+    display: table;
+    clear: both;
+}
+.my-img img{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+.my-img p{
+    text-align: center;
+    padding: 15px;
+}
+
+.about-des p{
+    padding: 15px;
+    text-align: center;
+}
+.about-des p a{
+    color: white;
+    text-decoration: none;
+}
+.cv-btn{
+    background-color:  #14588f;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+}
+.cv-btn:hover{
+    background-color: #1982d8;
+}
+.about-me::after{
+    clear: both;
+    content: "";
+    display: table;
+    
+}
+/* about me end*/
+
+/* professional start */
+.work-ex{
+   margin: 25px 0 25px 0;
+}
+.card{
+    padding: 40px;
+    background-color: #a39e9e;
+    transition: 0.2s;
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card:hover{
+    box-shadow: 0 4px 5px 5px black;
+}
+.icon{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.rnd-img{
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 10px;
+}
+.tittle h2{
+    margin-bottom: 20px;
+    background-color: #616161;
+    color: white;
+    padding: 5px;
+    font-size: 22px;
+    border-radius: 5px;
+}
+.crd-des ol li h5{
+    font-size: 16px;
+    padding-bottom: 8px;
+}
+.crd-des ol li p{
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 3px;
+}
+
+/* skill start */
+
+.container ul li{
+    list-style-type: none;
+    font-size: 17px;
+    color: white;
+    margin: 50px 0;
+    position: relative;
+    text-transform: capitalize;
+}
+.container ul li::before{
+    content: '';
+    height: 20px;
+    width: 100%;
+    background-color: rgb(170, 167, 173);
+    position: absolute;
+    top: 25px;
+   border-radius: 10px;
+}
+.container ul li::after{
+    content: '';
+    height: 20px;
+    width: 0;
+    background-color: rgb(249, 249, 250);
+    position: absolute;
+    top: 25px;
+    left: 0;
+   border-radius: 10px;
+   animation: 3s linear 1s 3 forwards;
+}
+.container ul li.html::after{
+    animation-name: hml;
+}
+@keyframes hml{
+    to{
+        width: 90%;
+        background-color: orange;
+    }
+}
+.container ul li.css::after{
+    animation-name: cs;
+}
+@keyframes cs{
+    to{
+        width: 65%;
+        background-color: greenyellow;
+    }
+}
+.container ul li.bots::after{
+    animation-name: bot;
+}
+@keyframes bot{
+    to{
+        width: 80%;
+        background-color: blueviolet;
+    }
+}
+.container ul li.jv::after{
+    animation-name: java;
+}
+@keyframes java{
+    to{
+        width: 50%;
+        background-color: rgb(36, 180, 206);
+    }
+}
+.container ul li.python::after{
+    animation-name: pyton;
+}
+@keyframes pyton{
+    to{
+        width: 70%;
+        background-color: rgb(14, 12, 155);
+    }
+}
+.container ul li.c::after{
+    animation-name: cp;
+}
+@keyframes cp{
+    to{
+        width: 80%;
+        background-color: red;
+    }
+}
+.work-ex::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* professional end */
+
+/*fotter start*/
+.fotter{
+    background-color: #39a4a6;
+    width: 100%;
+}
+.achivement{
+    padding: 60px;
+    background-color: #39a4a6;
+    text-align: center;
+    
+}
+.achivement ol li p{
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+.form{
+    padding: 55px;
+    background-color: #39a4a6;
+    text-align: center;
+    
+}
+.form #name, #email{
+    height: 30px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+}
+.form #text{
+    width: 250px; 
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+}
+.form .send{
+    height: 28px;
+    width: 55px;
+    padding: 0px;
+    text-align: center;
+    margin:5px 5px 5px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color:  #14588f;
+    color: white;
+}
+.form .send:active{
+    background-color: #1982d8;
+}
+
+/*icon start*/
+.soc-icon{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+.soc-icon p{
+    padding: 15px;
+    font-size: 15px;
+    text-align: center;
+}
+.soc-icon p span{
+    font-weight: bolder;
+    color: rgb(247, 115, 38);
+}
+.soc-icon .btn{
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+.fa-brands{
+    color: white;
+}
+.facebook{
+    background: #14588f;
+    padding: 8px 13px 8px 13px;
+}
+.youtube{
+    background: #bb0000;
+    padding: 8px;
+}
+.twitter{
+    background: #55ACEE;
+    padding: 8px 10px 8px 10px;
+}
+.instagram{
+    background: #125688;
+    padding: 8px 10px 8px 10px;
+}
+.soc-icon .btn:hover{
+    opacity: 0.7;
+}
+.fotter::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*icon end*/
+
+/*fotter end*/
